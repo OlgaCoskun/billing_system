@@ -1,5 +1,7 @@
 class Order
 
+  attr_accessor :quantity, :source_name, :amount_paid
+
   def initialize(attributes)
     raise InvalidSource unless source = Source.find_by_name(attributes[:source_name])
     @quantity = attributes[:quantity]
